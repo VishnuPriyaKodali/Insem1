@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Expectation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="expectation">
+    <h2>Submit Your Expectation</h2>
+    <label>Rate your expectation (1-5)</label>
+    <select>
+        <option value="1">1 - Low</option>
+        <option value="2">2</option>
+        <option value="3">3 - Medium</option>
+        <option value="4">4</option>
+        <option value="5">5 - High</option>
+    </select>
+    <textarea placeholder="What do you expect from this movie/event?"></textarea>
+    <button class="submit">Submit Expectation</button>
+    <nav>
+        <button onclick="showSection('movie')">Back to Movie/Event</button>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

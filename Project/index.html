@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expectation & Review System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================== HOME ================== -->
+<section id="home" class="active">
+    <h2>Welcome to the Expectation & Review System</h2>
+    <p>Discover reviews, submit your expectations and experiences for movies or events.</p>
+    <nav>
+        <button onclick="showSection('register')">Register/Login</button>
+        <button onclick="showSection('movie')">Movie/Event Details</button>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('profile')">Profile</button>
+    </nav>
+</section>
+
+<!-- ================== REGISTER/LOGIN ================== -->
+<section id="register">
+    <h2>Register / Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="submit">Register</button>
+    <button class="submit">Login</button>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== MOVIE/EVENT DETAILS ================== -->
+<section id="movie">
+    <h2>Movie/Event Details</h2>
+    <p><strong>Title:</strong> Example Movie</p>
+    <p><strong>Genre:</strong> Action, Drama</p>
+    <p><strong>Date/Time:</strong> 10th Sep 2025, 7:00 PM</p>
+    <button onclick="showSection('expectation')">Submit Expectation</button>
+    <button onclick="showSection('review')">Submit Review</button>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== EXPECTATION ================== -->
+<section id="expectation">
+    <h2>Submit Your Expectation</h2>
+    <label>Rate your expectation (1-5)</label>
+    <select>
+        <option value="1">1 - Low</option>
+        <option value="2">2</option>
+        <option value="3">3 - Medium</option>
+        <option value="4">4</option>
+        <option value="5">5 - High</option>
+    </select>
+    <textarea placeholder="What do you expect from this movie/event?"></textarea>
+    <button class="submit">Submit Expectation</button>
+    <nav>
+        <button onclick="showSection('movie')">Back to Movie/Event</button>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== REVIEW ================== -->
+<section id="review">
+    <h2>Submit Your Review</h2>
+    <label>Rate your experience (1-5)</label>
+    <select>
+        <option value="1">1 - Poor</option>
+        <option value="2">2</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <textarea placeholder="Write your review here..."></textarea>
+    <label>Did it meet your expectations?</label>
+    <select>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="partially">Partially</option>
+    </select>
+    <button class="submit">Submit Review</button>
+    <nav>
+        <button onclick="showSection('movie')">Back to Movie/Event</button>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== DASHBOARD ================== -->
+<section id="dashboard">
+    <h2>Review Dashboard</h2>
+    <p>Graph showing average expectations vs. actual ratings (placeholder)</p>
+    <p>Filter reviews: [Dropdowns/Checkboxes placeholder]</p>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== PROFILE ================== -->
+<section id="profile">
+    <h2>Your Profile</h2>
+    <p>List of submitted expectations and reviews (placeholder)</p>
+    <p>Edit/Delete options (placeholder)</p>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<!-- ================== SCRIPT ================== -->
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>

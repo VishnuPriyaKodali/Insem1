@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="review">
+    <h2>Submit Your Review</h2>
+    <label>Rate your experience (1-5)</label>
+    <select>
+        <option value="1">1 - Poor</option>
+        <option value="2">2</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <textarea placeholder="Write your review here..."></textarea>
+    <label>Did it meet your expectations?</label>
+    <select>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="partially">Partially</option>
+    </select>
+    <button class="submit">Submit Review</button>
+    <nav>
+        <button onclick="showSection('movie')">Back to Movie/Event</button>
+        <button onclick="showSection('home')">Home</button>
+    </nav>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
